@@ -45,6 +45,7 @@ Libaries Required to Install on Raspberry Pi
 ```
 
 Tested On (Client): Raspberry Pi 3b; Raspbian Version 11 Bullseye
+
 Tested On (Sever): Macbook Pro Apple M1 Ventura 13.0.01 Python Version 3.11.2
 
 UDP Server should work on Linux without an issue as only library that is imported is socket. This is yet to be tested and will be updated in the future.
