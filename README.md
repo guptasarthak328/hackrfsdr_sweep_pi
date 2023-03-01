@@ -4,6 +4,9 @@ This project contains 2 python files that allows the user to scan the frequencie
 
 The HackRF SDR can be tuned a center frequency and sample rate determined by the user at execution through command line arguments. An example output that will be provided on the Host PC's Terminal: "Message from Client: 'Freq: 8.243e+07 Hz, dBm: -78.215'"
 
+## How to Use
+
+
 ## Installation
 ### Requirements
 
@@ -11,7 +14,6 @@ Libaries Required to Install on Raspberry Pi
 ```bash
     sudo apt install numpy matplotlib hackrf rtl-sdr  gr-osmosdr gnuradio
 ```
-[pi_requirements.txt](https://github.com/guptasarthak328/hackrfsdr_sweep_pi/files/10862265/pi_requirements.txt)
 
 Tested On (Client): Raspberry Pi 3b; Raspbian Version 11 Bullseye
 Tested On (Sever): Macbook Pro Apple M1 Ventura 13.0.01 Python Version 3.11.2
@@ -29,9 +31,12 @@ All 3 of these must be changed on both Client and Sever. Find and replace:
 2. SEVER PORT
 3. YOUR FILE NAME 
 
+#### Server UDP Server
+sdr_server.py must output "UDP Server Up and Running" before sdr_client.py is executed. This is can be done by executing this file immediately after the Ethernet Connection has been established but before the raspberry pi starts transmitting data. A screenshot and video have been included below for further reference.
+
 #### Executing the files w/ Command Line Arguments
 
-sdr_sever.py should be run on the Raspberry Pi and will be given command line arguements in the format Center Frequency and Sample Rate. For example:
+sdr_client.py should be run on the Raspberry Pi and will be given command line arguements in the format Center Frequency and Sample Rate. For example:
 
 ```bash
     python3 /Users/John/Desktop/Hackrf/sdr_server.py 92e6 20e6
