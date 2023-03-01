@@ -7,28 +7,32 @@ The HackRF SDR can be tuned a center frequency and sample rate determined by the
 ## Table of Contents
 # Table of Contents
 
-- How to Use
-  - Installation
-    - Requirements
-    - Setting up
-      - Hardware
-      - Editing the Files
-      - Setting Up UDP Server
-      - Executing the files w/ Command Line Arguments
-      - Running File on Boot
-  - Documentation
-    - Testing Libraries
-      - HackRF SDR
-      - GNURadio + OsmoSDR
-    - How Does the Code Work
-    - GNURadio Version Note
-  - Screenshots
-  - Terminal Demonstration
+ - How to Use
+ - Installation
+   - Requirements
+   - Setting up
+     - Hardware
+     - Editing the Files
+     - Setting Up UDP Server
+     - Executing the files w/ Command Line Arguments
+     - Running File on Boot
+ - Documentation
+   - Testing Libraries
+     - HackRF SDR
+     - GNURadio + OsmoSDR
+   - How Does the Code Work
+   - GNURadio Version Note
+ - Screenshots
+ - Terminal Demonstration
 
 ## How to Use
+Description of the files in this repo:
+
 sdr_client.py is the file that will be executed on the Raspberry Pi that will do the 99% of the function of this project. It will interface with the HackRF Software Defined Radio (SDR) (More info on the HackRF SDR here: https://greatscottgadgets.com/sdr/), create and work with GNURadio Blocks (More info here: https://wiki.gnuradio.org/index.php/Main_Page), and finally formating the data and sending the desired output to a UDP Server. 
 
 sdr_server.py provides the user to create a UDP Server that will work over Wireless Lan or Ethernet.
+
+requirements.txt is the Python Environment Requriements for the Raspberry Pi.
 
 ## Installation
 ### Requirements
