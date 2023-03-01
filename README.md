@@ -1,11 +1,32 @@
 # HackRF SDR Sweep Power Spectral Density
 
-This project contains 2 python files that allows the user to scan the frequencies of the evironment using a HackRF SDR and Raspberry Pi to dump this information from the Pi to a Host PC through an ethernet cable (UDP). The project acts like a low-cost spectrum analyser. This project is for users that are...
+This project contains 2 python files that allows the user to scan the frequencies of the evironment using a HackRF SDR and Raspberry Pi to dump this information from the Pi to a Host PC through an ethernet cable (UDP). The project acts like a low-cost spectrum analyser. This project is for users that are interested in analysing the power of frequencies in their environment such as FM Radio, Wifi or simply just noise.
 
 The HackRF SDR can be tuned a center frequency and sample rate determined by the user at execution through command line arguments. An example output that will be provided on the Host PC's Terminal: "Message from Client: 'Freq: 8.243e+07 Hz, dBm: -78.215'"
 
-## How to Use
+## Table of Contents
+1. How to Use
+2. Installation
+    a. Requirements
+    b. Setting up
+        i. Hardware
+        ii. Editing the Files
+        iii. Setting Up UDP Server
+        iv. Executing the files w/ Command Line Arguments
+        v. Running File on Boot
+3. Documentation
+    a. Testing Libraries
+        i. HackRF SDR
+        ii. GNURadio + OsmoSDR
+    b. How Does the Code Work
+    c. GNURadio Version Note
+5. Screenshots
+6. Terminal Demonstration
 
+## How to Use
+sdr_client.py is the file that will be executed on the Raspberry Pi that will do the 99% of the function of this project. It will interface with the HackRF Software Defined Radio (SDR) (More info on the HackRF SDR here: https://greatscottgadgets.com/sdr/), create and work with GNURadio Blocks (More info here: https://wiki.gnuradio.org/index.php/Main_Page), and finally formating the data and sending the desired output to a UDP Server. 
+
+sdr_server.py provides the user to create a UDP Server that will work over Wireless Lan or Ethernet.
 
 ## Installation
 ### Requirements
@@ -18,20 +39,27 @@ Libaries Required to Install on Raspberry Pi
 Tested On (Client): Raspberry Pi 3b; Raspbian Version 11 Bullseye
 Tested On (Sever): Macbook Pro Apple M1 Ventura 13.0.01 Python Version 3.11.2
 
-UDP Server should work on Linux without an issue as only library that is imported is socket.
+UDP Server should work on Linux without an issue as only library that is imported is socket. This is yet to be tested and will be updated in the future.
 
 ### Setting Up
 #### Hardware
 ![IMG_3938](https://user-images.githubusercontent.com/118889521/222162280-e1afb688-7b47-473c-a9b8-9cc9a26487f2.JPG)
 Diagram indicates a Raspberry Pi 3b connected to power, an ethernet cable to the UDP Sever PC and the HackRF SDR USB Cable. THe HackRF SDR will also have to be connected to an antenna using the SMA Antenna Port.
 
-#### IP Adress + Port Number + Filename
-All 3 of these must be changed on both Client and Sever. Find and replace: 
-1. SEVER IP ADDRESS
-2. SEVER PORT
-3. YOUR FILE NAME 
+#### Editing the Files: IP Adress + Port Number + Filename
+sdr_client.py will be run on the Raspberry Pi and sdr_sever.py will be run on the PC that is going to recieve the data. Before this the user must replace key information on the files. 
 
-#### Server UDP Server
+All 3 of these must be changed on both Client and Sever. Find and replace with your own details: 
+1. SEVER IP ADDRESS
+    - This will be the Ethernet's IP Address.
+2. SEVER PORT
+    - A port that isn't being utilised by your PC.
+4. YOUR FILE NAME 
+    - The directory and file name of where the raw binary data file and metadata header will be stored.
+
+Both files have been commented for the user's ease.
+
+#### Setting Up UDP Server
 sdr_server.py must output "UDP Server Up and Running" before sdr_client.py is executed. This is can be done by executing this file immediately after the Ethernet Connection has been established but before the raspberry pi starts transmitting data. A screenshot and video have been included below for further reference.
 
 #### Executing the files w/ Command Line Arguments
@@ -45,13 +73,13 @@ sdr_client.py should be run on the Raspberry Pi and will be given command line a
 #### Running File on Boot
 Follow this tutorial for rc.local: https://www.makeuseof.com/how-to-run-a-raspberry-pi-program-script-at-startup/
 
-One limitation of starting this script on boot is the lack of flexibility to change the Center Frequency and Sample Rate. You will have to ssh into the pi to edit the center frequency and sample rate.
+One limitation of starting this script on boot is the lack of flexibility to change the Center Frequency and Sample Rate. You will have to ssh into the pi to customise the center frequency and sample rate. To terminate the script remove it from rc.local and reboot the Raspberry Pi.
 
 
 ## Documentation
 
 ### Testing Libraries
-#### HackRF
+#### HackRF SDR
 
 To ensure that HackRF SDR is working, plug it in and run:
 ```bash
