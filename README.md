@@ -12,6 +12,10 @@ Libaries Required to Install on Raspberry Pi
     sudo apt install numpy matplotlib hackrf rtl-sdr  gr-osmosdr gnuradio
 ```
 ### Setting Up
+#### Hardware
+![IMG_3938](https://user-images.githubusercontent.com/118889521/222162280-e1afb688-7b47-473c-a9b8-9cc9a26487f2.JPG)
+Diagram indicates a Raspberry Pi 3b 
+
 #### IP Adress + Port Number + Filename
 All 3 of these must be changed on both Client and Sever. Find and replace: 
 1. SEVER IP ADDRESS
@@ -67,3 +71,7 @@ It can be easily recreated in any GNURadio version through these steps
 ![Screenshot2](https://user-images.githubusercontent.com/118889521/221858083-daa406ba-24f4-4b34-83eb-aca4db9b7d16.png)
 
 This shows the Terminal of the Raspberry Pi. It will output a message indicating the connection between the server and client. Do not be alarmed by the "0" as this is simply the SDR's way of informing you that the sample rate might be too high and may affect the quality of the frequency sweeps. Lowering the sample rate will reduce the number of "0"s.
+
+## Terminal Demonstration
+
+
