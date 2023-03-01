@@ -34,6 +34,8 @@ sdr_server.py provides the user to create a UDP Server that will work over Wirel
 
 requirements.txt is the Python Environment Requriements for the Raspberry Pi.
 
+flowchart,grc is the GNURadio 3.8 flowchart used to interface with the HackRF SDR through the OsmocomSDR library, compute the FFT of the signal and convert this to Power (dBm) and write it to a binary file alongisde a detached metadata file.
+
 ## Installation
 ### Requirements
 
