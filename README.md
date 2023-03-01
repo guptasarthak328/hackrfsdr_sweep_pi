@@ -103,7 +103,7 @@ Open the following file included in the repository: hackrf_sweep.grc
 
 ![Screenshot](https://user-images.githubusercontent.com/118889521/221857811-5352b99a-ac51-4bbd-a882-665762195ba6.png)
 
-If this runs properly this will provide a dynamic Power by Frequency Graph and your libraries have installed appropriately.
+If this runs properly this will provide a dynamic Power by Frequency graph which indicates that the libraries have installed appropriately.
 
 ### How Does the Code Work
 The python script that enables the format and transfer of data will be described here. Firstly, the code opens the binary file with data format of 32 Bit Floats and stores this as a numpy array.
