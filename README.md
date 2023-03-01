@@ -73,5 +73,5 @@ It can be easily recreated in any GNURadio version through these steps
 This shows the Terminal of the Raspberry Pi. It will output a message indicating the connection between the server and client. Do not be alarmed by the "0" as this is simply the SDR's way of informing you that the sample rate might be too high and may affect the quality of the frequency sweeps. Lowering the sample rate will reduce the number of "0"s.
 
 ## Terminal Demonstration
-
-
+A link to the video can be found here: https://drive.google.com/file/d/18Gwf8aO_eVr3t64fMjhEuFfegfMWZLtG/view?usp=sharing
+The first image shows the same annotated image provided above in the "Hardware" section. The 2nd image is the Raspberry Pi Terminal if the sdr_client is executed manually. The first line initialises relevant libaries and the following lines is the comfirmation of the connection with the HackRF SDR. Zeros indicate the sample rate has been set too high
