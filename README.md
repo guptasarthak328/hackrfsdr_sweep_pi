@@ -5,12 +5,13 @@ This project contains 2 python files that allows the user to scan the frequencie
 The HackRF SDR can be tuned a center frequency and sample rate determined by the user at execution through command line arguments. An example output that will be provided on the Host PC's Terminal: "Message from Client: 'Freq: 8.243e+07 Hz, dBm: -78.215'"
 
 ## Installation
+### Requirements
 
 Libaries Required to Install on Raspberry Pi
 ```bash
     sudo apt install numpy matplotlib hackrf rtl-sdr  gr-osmosdr gnuradio
 ```
-
+### Setting Up
 #### IP Adress + Port Number + Filename
 All 3 of these must be changed on both Client and Sever. Find and replace: 
 1. SEVER IP ADDRESS
