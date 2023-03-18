@@ -96,6 +96,10 @@ To ensure that HackRF SDR is working, plug it in and run:
 ```
 More details are here: https://hackrf.readthedocs.io/en/latest/getting_started_hackrf_gnuradio.html
 
+Ensure that the Hackrf One SDR firmware is up to date to the lastest version
+
+Details on how to do so can be found here: https://www.youtube.com/watch?v=0L7H0qu7Zmg&ab_channel=SecureTechware
+
 #### GNURadio + OsmoSDR
 Now open GNURadio 3.8.2 (or the latest version avaiable on Raspbian). The included file is the flowchart that will allow you to test osmosdr source. 
 
