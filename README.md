@@ -12,8 +12,9 @@ The HackRF SDR can be tuned a center frequency and sample rate determined by the
    - Requirements
    - Setting up
      - Hardware
+     - Setting Up UDP Server 
      - Editing the Files
-     - Setting Up UDP Server
+     - Transfering sdr_client.py to Raspberry Pi
      - Executing the files w/ Command Line Arguments
      - Running File on Boot
  - Documentation
@@ -85,9 +86,9 @@ Only 2 have to be changed on the Server fie. Find and repalce with your own deta
 2. SERVER PORT
     - A port that isn't being utilised by your PC.
 
-#### Transfering file to Raspberry Pi
+#### Transfering sdr_client.py to Raspberry Pi
 
-Using SCP to transfer files wireless you can transfer the edited sdr_client.py to the Raspberry Pi.
+Using SCP to transfer files wireless, such that you can transfer the edited sdr_client.py to the Raspberry Pi.
 
 Details here: https://spellfoundry.com/docs/copying-files-to-and-from-raspberry-pi-and-mac/#:~:text=Copying%20Files%20From%20Raspberry%20Pi%20To%20A%20Mac,-SCP&text=Open%20a%20terminal%20window%20and,the%20filename%20and%20the%20%E2%80%9C.%E2%80%9D
 
