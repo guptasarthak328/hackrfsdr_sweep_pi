@@ -56,7 +56,17 @@ Diagram indicates a Raspberry Pi 3b connected to power, an ethernet cable to the
 #### Setting Up UDP Server
 sdr_server.py must output "UDP Server Up and Running" before sdr_client.py is executed. This is can be done by executing this file immediately after the Ethernet Connection has been established but before the raspberry pi starts transmitting data. A screenshot and video have been included below for further reference.
 
-Currently, when you disconnect and reconnect the Ethernet cable on a Macbook, the Macbook will reassign the IP Address of the Server. Hence you must 
+Currently, when you disconnect and reconnect the Ethernet cable on a Macbook, the Macbook will reassign the IP Address of the Server. Hence you must alter the Ethernet connection in the network settings of the Macbook (This will be updated in the future for tutorials for Linux and Windows too). 
+
+1. Click on "details" of the Ethernet connection. 
+2. Navigate to "TCP/IP"
+3. Change "Configure IPv4" to "Using DHCP with Manual Address"
+4. Configure the IP Address as you please. This will be the SERVER ADDRESS you will append on the sdr_client.py and sdr_server.py files.
+
+An example is shown below. 
+
+<img width="676" alt="image" src="https://user-images.githubusercontent.com/118889521/226114761-43c16796-c10e-44e5-96ae-c2be6532a75d.png">
+
 
 #### Editing the Files: IP Adress + Port Number + Filename
 sdr_client.py will be run on the Raspberry Pi and sdr_server.py will be run on the PC that is going to recieve the data. Before this the user must replace key information on the files. 
@@ -188,4 +198,6 @@ This shows the Terminal of the Server (in this a Macbook Pro Visual Studio Code)
 ## Terminal Demonstration
 A link to the video can be found here: https://drive.google.com/file/d/18Gwf8aO_eVr3t64fMjhEuFfegfMWZLtG/view?usp=sharing
 
-Similar screenshots have been included in the "Screenshot" section. The first image shows the same annotated image provided above in the "Hardware" section. The 2nd image is the Raspberry Pi Terminal if the sdr_client is executed manually. The first line initialises relevant libaries and the following lines is the comfirmation of the connection with the HackRF SDR. Zeros indicate the sample rate has been set too high. The repetitive lines is the messaged received from the server indicating that there is a connection established. The video shows a Macbook's VSC (Server) terminal. Intially the execution fails as the Raspberry Pi takes time to boot up and connect to the ethernet port's IP address. A pop up appears with the Macbook requesting to "Accept Incoming Connection." The terminal then outputs the message from the client. 
+Similar screenshots have been included in the "Screenshot" section. The first image shows the same annotated image provided above in the "Hardware" section. The 2nd image is the Raspberry Pi Terminal if the sdr_client is executed manually. The first line initialises relevant libaries and the following lines is the comfirmation of the connection with the HackRF SDR. Zeros indicate the sample rate has been set too high. The repetitive lines is the messaged received from the server indicating that there is a connection established. The video shows a Macbook's VSC (Server) terminal. Intially the execution fails as the Raspberry Pi takes time to boot up and connect to the ethernet port's IP address. A pop up appears with the Macbook requesting to "Accept Incoming Connection." The terminal then outputs the message from the client.
+
+Note: From boot to UDP data transfer it will take approximately 30 seconds.
