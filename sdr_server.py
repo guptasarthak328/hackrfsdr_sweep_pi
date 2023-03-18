@@ -1,9 +1,9 @@
 import socket
 
-ipaddress = SERVER IP ADDRESS
-port = SEVER PORT #Choose a port that isn't in use by your sever laptop
+ipaddress = "SERVER IP ADDRESS"
+port = SERVER PORT #Choose a port that isn't in use by your sever laptop
 
-localIP     = "ipaddress"
+localIP     = ipaddress
 
 localPort   = port 
 
