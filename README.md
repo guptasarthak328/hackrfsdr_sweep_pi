@@ -40,12 +40,14 @@ flowchart.grc is the GNURadio 3.8 flowchart used to interface with the HackRF SD
 ## Installation
 ### Requirements
 
+Install Raspbian on a fresh Raspberry Pi using the Oficial Raspberry Pi Imager. https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up/0
+
 Libraries Required to Install on Raspberry Pi
 ```bash
     sudo apt install python3-numpy python3-matplotlib hackrf rtl-sdr gr-osmosdr gnuradio
 ```
 
-Tested On (Client): Raspberry Pi 3b; Raspbian Version 11 Bullseye; Python Version 3.9.2
+Tested On (Client): Raspberry Pi 3b+ and Raspberry Pi 3b; Raspbian Version 11 Bullseye; Python Version 3.9.2
 
 Tested On (Server): Macbook Pro Apple M1 Ventura 13.0.01 Python Version 3.11.2
 
