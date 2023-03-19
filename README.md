@@ -42,7 +42,8 @@ flowchart.grc is the GNURadio 3.8 flowchart used to interface with the HackRF SD
 
 Install Raspbian on a fresh Raspberry Pi using the Oficial Raspberry Pi Imager. https://projects.raspberrypi.org/en/projects/raspberry-pi-setting-up/0
 
-Libraries Required to Install on Raspberry Pi
+Libraries Required to Install on Raspberry Pi. This can be done on through SSH or on the Pi directly if you have a monitor. More details on how to SSH and SCP below.
+
 ```bash
     sudo apt install python3-numpy python3-matplotlib hackrf rtl-sdr gr-osmosdr gnuradio
 ```
@@ -95,7 +96,7 @@ Only 2 have to be changed on the Server file. Find and replace with your own det
 
 #### Transferring sdr_client.py to Raspberry Pi
 
-Using SCP to transfer files wirelessly, such that you can transfer the edited sdr_client.py to the Raspberry Pi.
+Using SCP to transfer files wirelessly, such that you can transfer the edited sdr_client.py to the Raspberry Pi. Note that this SCP command should be run on the Laptop/Computer/Server's Terminal not the Raspberry Pi Terminal.
 
 Details here: https://spellfoundry.com/docs/copying-files-to-and-from-raspberry-pi-and-mac/#:~:text=Copying%20Files%20From%20Raspberry%20Pi%20To%20A%20Mac,-SCP&text=Open%20a%20terminal%20window%20and,the%20filename%20and%20the%20%E2%80%9C.%E2%80%9D
 
@@ -113,7 +114,7 @@ Once you have established an SSH connection. Run this command. This is the IP Ad
     hostname -I
 ```
 
-This IP Address will allow you to transfer files between your Computer and Raspberry Pi.
+This IP Address will allow you to transfer files between your Computer and Raspberry Pi if [username]@[hostname].local is not working.
 
 #### Executing the files w/ Command Line Arguments
 
