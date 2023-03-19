@@ -146,7 +146,7 @@ sdr_server.py must be running before the sdr_client.py runs. This file can be ru
 3. Vector Length
 
 ```bash
-    python3 /Users/John/Desktop/Hackrf/sdr_server.py 2 20001 169.450.690.82 1024
+    python3 /Users/John/Desktop/Hackrf/sdr_server.py 20001 169.450.690.82 1024
 ```
 
 #### Running File on Boot
