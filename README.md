@@ -83,7 +83,7 @@ All 3 of these must be changed on the Client file. Find and replace with your ow
 Only 2 have to be changed on the Server file. Find and replace with your own details:
 1. SERVER IP ADDRESS
     - This will be the Ethernet's IP Address.
-2. SERVER PORT
+2. SERVER PORT NUMBER
     - A port that isn't being utilised by your PC.
 
 #### Transferring sdr_client.py to Raspberry Pi
