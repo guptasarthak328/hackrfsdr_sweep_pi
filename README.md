@@ -55,6 +55,7 @@ Tested On (Server): Macbook Pro Apple M1 Ventura 13.0.01 Python Version 3.11.2
 The diagram indicates a Raspberry Pi 3b connected to power, an ethernet cable to the UDP Server PC and the HackRF SDR USB Cable. THe HackRF SDR will also have to be connected to an antenna using the SMA Antenna Port.
 
 #### Setting Up UDP Server
+
 sdr_server.py must output "UDP Server Up and Running" before sdr_client.py is executed. This is can be done by executing this file immediately after the Ethernet Connection has been established but before the raspberry pi starts transmitting data. A screenshot and video have been included below for further reference.
 
 Currently, when you disconnect and reconnect the Ethernet cable on a Macbook, the Macbook will reassign the IP Address of the Server. Hence you must alter the Ethernet connection in the network settings of the Macbook (This will be updated in the future for tutorials for Linux and Windows too). 
@@ -70,21 +71,25 @@ An example is shown below.
 
 
 #### Editing the Files: IP Address + Port Number + Filename
-sdr_client.py will be run on the Raspberry Pi and sdr_server.py will be run on the PC that is going to receive the data. Before this, the user must replace key information on the files. 
+
+sdr_client.py will be run on the Raspberry Pi and sdr_server.py will be run on the PC that is going to receive the data. Before this, the user must replace key information on the files. As of 19.3.23 you can skip this step use command line arguments instead, however, if you want to hardcode this variables you can as well.
 
 All 3 of these must be changed on the Client file. Find and replace with your own details: 
-1. SERVER IP ADDRESS
-    - This will be the Ethernet's IP Address.
-2. SERVER PORT
-    - A port that isn't being utilised by your PC.
-3. YOUR FILE NAME 
+
+1. YOUR FILE NAME for both SDR 1 and SDR 2
     - The directory and file name of where the raw binary data file will be stored.
+2. SERVER IP ADDRESS
+    - This will be the Ethernet's IP Address.
+3. SERVER PORT
+    - A port that isn't being utilised by your PC.
+4. VECTOR LENGTH
 
 Only 2 have to be changed on the Server file. Find and replace with your own details:
 1. SERVER IP ADDRESS
     - This will be the Ethernet's IP Address.
 2. SERVER PORT NUMBER
     - A port that isn't being utilised by your PC.
+3. VECTOR LENGTH
 
 #### Transferring sdr_client.py to Raspberry Pi
 
@@ -110,7 +115,8 @@ This IP Address will allow you to transfer files between your Computer and Raspb
 
 #### Executing the files w/ Command Line Arguments
 
-sdr_client.py should be run on the Raspberry Pi and will be given command line arguments in the format:
+sdr_client.py should be run on the Raspberry Pi and will be given command line arguments in the format below. You can ssh into Raspberry Pi if you aren't using a head.
+
 1. Number of SDRs
 2. Filename 1
 3. Filename 2 [Only if you have 2 SDRs]
@@ -121,10 +127,26 @@ sdr_client.py should be run on the Raspberry Pi and will be given command line a
 8. Center Frequency of SDR 1
 9. Center Frequency of SDR 2 [Only if you have 2 SDRs]
 
-For example:
+Example for 1 SDR:
 
 ```bash
-    python3 /Users/John/Desktop/Hackrf/sdr_server.py 2 /home/pi/Desktop/sdr1 /home/pi/Desktop/sdr2 20001 169.450.690.82 512 400e6 200e6 600e6
+    python3 /Users/John/Desktop/Hackrf/sdr_client.py 1 /home/pi/Desktop/sdr1 20001 169.450.690.82 1024 400e6 200e6
+```
+
+For example for 2 SDRs:
+
+```bash
+    python3 /Users/John/Desktop/Hackrf/sdr_client.py 2 /home/pi/Desktop/sdr1 /home/pi/Desktop/sdr2 20001 169.450.690.82 1024 400e6 200e6 600e6
+```
+
+sdr_server.py must be running before the sdr_client.py runs. This file can be run through command line arguments as well in the format below:
+
+1. Server Port
+2. IP Address of Server
+3. Vector Length
+
+```bash
+    python3 /Users/John/Desktop/Hackrf/sdr_server.py 2 20001 169.450.690.82 1024
 ```
 
 #### Running File on Boot
