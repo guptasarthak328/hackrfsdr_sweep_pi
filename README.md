@@ -170,7 +170,7 @@ Ensure that the Hackrf One SDR firmware is up to date with the lastest version
 Details on how to do so can be found here: https://www.youtube.com/watch?v=0L7H0qu7Zmg&ab_channel=SecureTechware
 
 #### GNURadio + OsmoSDR
-Now open GNURadio 3.8.2 (or the latest version available on Raspbian). The included file is the flowchart that will allow you to test osmosdr source.
+Now open GNURadio 3.8.2 (or the latest version available on Raspbian). The included file is the flowchart that will allow you to test osmosdr source. This is the same flowchart used for the 1 SDR version of the code.
 
 Open the following file included in the repository: hackrf_sweep.grc
 
