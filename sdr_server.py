@@ -1,13 +1,12 @@
+## https://pythontic.com/modules/socket/udp-client-server-example ##
+
 import socket
 
-ipaddress = "SERVER IP ADDRESS"
-port = SERVER PORT #Choose a port that isn't in use by your sever laptop
+localIP     = sys.argv[2] #SERVER IP ADDRESS
 
-localIP     = ipaddress
+localPort   =  int(sys.argv[1]) #PORT NUMBER
 
-localPort   = port 
-
-bufferSize  = 1024
+bufferSize  = int(sys.argv[3]) #VECTOR LENGTH
  
 msgFromServer       = "Hello UDP Client"
 
