@@ -111,15 +111,15 @@ This IP Address will allow you to transfer files between your Computer and Raspb
 #### Executing the files w/ Command Line Arguments
 
 sdr_client.py should be run on the Raspberry Pi and will be given command line arguments in the format:
-Number of SDRs
-Filename 1
-Filename 2 [Only if you have 2 SDRs]
-Server Port
-IP Address of Server
-Vector Length
-Sample Rate
-Center Frequency of SDR 1
-Center Frequency of SDR 2 [Only if you have 2 SDRs]
+1. Number of SDRs
+2. Filename 1
+3. Filename 2 [Only if you have 2 SDRs]
+4. Server Port
+5. IP Address of Server
+6. Vector Length
+7. Sample Rate
+8. Center Frequency of SDR 1
+9. Center Frequency of SDR 2 [Only if you have 2 SDRs]
 
 For example:
 
