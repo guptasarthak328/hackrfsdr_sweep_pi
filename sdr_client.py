@@ -131,7 +131,7 @@ else:
             def update(length):
                 i = 0
                 while i < length:
-                    x_i = X[i*1024:(i+1)*1024]
+                    x_i = X[i*N:(i+1)*N]
                     for j in range(len(f)):
                         freq = f[j]
                         dBm = x_i[j]
@@ -327,8 +327,8 @@ else:
             def update(length):
                 i = 0
                 while i < length:
-                    x_i = X[i*1024:(i+1)*1024]
-                    y_i = Y[i*1024:(i+1)*1024]
+                    x_i = X[i*N:(i+1)*N]
+                    y_i = Y[i*N:(i+1)*N]
                     for j in range(len(f1)):
                         freq1 = f1[j]
                         dBm1 = x_i[j]
