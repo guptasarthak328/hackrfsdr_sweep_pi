@@ -29,7 +29,7 @@ else:
                 ##################################################
                 # Variables
                 ##################################################
-                self.vec_len = vec_len = float(sys.argv[5])
+                self.vec_len = vec_len = int(sys.argv[5])
                 self.samp_rate = samp_rate = float(sys.argv[6])
                 self.center_freq = center_freq = float(sys.argv[7])
                 filename = sys.argv[2] #Filename + Directory
@@ -119,7 +119,7 @@ else:
             Fs = float(sys.argv[6]) #Sample Rate
             center_freq = float(sys.argv[7]) #Center Frequency
             filename = sys.argv[2] #Filename + Directory
-            N = float(sys.argv[5]) #Vector Length
+            N = int(sys.argv[5]) #Vector Length
 
             time.sleep(5)
 
@@ -177,7 +177,7 @@ else:
                 ##################################################
                 # Variables
                 ##################################################
-                self.vec_len = vec_len = float(sys.argv[6])
+                self.vec_len = vec_len = int(sys.argv[6])
                 self.samp_rate = samp_rate = float(sys.argv[7])
                 self.center_freq_2 = center_freq_2 = float(sys.argv[8])
                 self.center_freq_1 = center_freq_1 = float(sys.argv[9])
@@ -311,7 +311,7 @@ else:
             center_freq2 = float(sys.argv[9])
             filename1 = sys.argv[2] #Filename + Directory
             filename2 = sys.argv[3]
-            N = float(sys.argv[6]) #Vector Length
+            N = int(sys.argv[6]) #Vector Length
 
             time.sleep(3)
 
